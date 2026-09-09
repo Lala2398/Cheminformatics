@@ -24,43 +24,43 @@ Every notebook is committed **fully executed**, with all outputs and figures pre
 
 ## The chapters
 
-### Chapter 1 — Introduction to Computational Chemistry
+### Chapter 1 : Introduction to Computational Chemistry
 
 The book's opening chapter is a survey: what the discipline covers, what hardware it needs, and where its results can be trusted. The notebook treats that survey as a set of testable claims, and doubles as the Python foundation for everything that follows — floats and formatting, lists and loops, dictionaries, regular expressions, decorators, classes, and vectorisation are all introduced on chemical problems rather than toy ones.
 
 The centrepiece is the book's **"black box" warning**. Two functions are built with identical interfaces and different internals; both look correct on the cases you would naturally test, and the notebook then maps the region where one of them silently fails. The scaling discussion is likewise made concrete: the combinatorics of two-electron integrals are counted, then the real scaling exponent is *measured* with a timer rather than asserted, which is why bigger molecules need bigger machines. Later cells build a torsional scan of butane, take it from a potential energy surface to bulk thermodynamics and a heat capacity from energy fluctuations, run a short molecular dynamics trajectory, and close with a neural network written from scratch in NumPy — then check honestly whether it beats a straight line.
 
-### Chapter 2.1 — Quantum Mechanics (§2.1–2.7)
+### Chapter 2.1 : Quantum Mechanics (§2.1–2.7)
 
 Everything here is in atomic units, and everything is built up rather than called. The Schrödinger equation is turned into a matrix eigenvalue problem by finite differences and solved for a particle in a box; the observable prescription is then applied numerically to those eigenfunctions. Hydrogenic radial functions are plotted, and the distinction between the radial function and the radial distribution is made visible.
 
 Antisymmetry gets a demonstration rather than a statement: a simple product of spin-orbitals is shown to fail under electron exchange, and beryllium's Slater determinant is expanded into all 24 signed products. The molecular orbital sections build the two-centre overlap integral, solve the LCAO problem as a generalised eigenvalue problem, work the book's formal three-orbital cubic, and reduce the whole apparatus to Hückel theory by replacing every matrix element with a parameter. The chapter ends with a **complete self-consistent field calculation on H₂ written from scratch** — STO-3G integrals, the SCF cycle, then a bond-length scan showing what a converged wave function is actually worth.
 
-### Chapter 2.2 — Quantum Mechanics (§2.8–2.16)
+### Chapter 2.2 : Quantum Mechanics (§2.8–2.16)
 
 The second half deals with everything the single-determinant picture leaves out. Configuration interaction is computed across an entire potential energy curve, so the growing weight of the doubly excited configuration at long bond lengths can be watched directly. The basis set discussion is quantitative: how well three Gaussians actually imitate an exponential, and what a larger expansion buys against what it costs.
 
 Correlation energy is examined for the book's claim that it is roughly constant — and the answer measured here is **two regimes, not one**, which the text reports honestly rather than smoothing over. Semi-empirical methods follow: what dropping the core saves, and for neglect of differential overlap, how many integrals survive and how large the discarded ones really are. The final sections compute Koopmans' theorem against a direct energy difference, Mulliken populations in three basis sets, the molecular electrostatic potential from a converged density, and static reactivity indices for naphthalene against a transition-state-like index.
 
-### Chapter 3 — Molecular Mechanics (§3.1–3.6)
+### Chapter 3 : Molecular Mechanics (§3.1–3.6)
 
 A force field, built one term at a time and then assembled. Bond stretching compares Morse, harmonic and cubic forms; angle bending shows why strained rings need their own parameters; torsions build one-, two- and threefold terms into the combination that describes butane. Non-bonded terms cover Lennard-Jones against Buckingham — including the **Buckingham catastrophe** at short range — constant against distance-dependent dielectric, and a 10-12 hydrogen bond function against the ordinary 6-12. The pieces are then combined into a complete, if minimal, working force field.
 
 Minimization is treated as its own subject: Newton-Raphson derived and implemented, then the book's warning demonstrated — nothing in the method insists on going *downhill*. Steepest descent and conjugate gradients are raced on an elongated quadratic surface, the cost of the Hessian is measured to show why second-derivative methods stay confined to small molecules, and local versus global minima are made unmistakable. Three parameterization claims from the book are each tested separately. The conformational analysis section ends with a rigid pentane scan compared against a relaxed one, a tree search using the book's own ring-closure criterion, and a dihedral driver built on its offset cosine restraint.
 
-### Chapter 4 — Statistical Mechanics (§4.1–4.6)
+### Chapter 4 : Statistical Mechanics (§4.1–4.6)
 
 The chapter opens on the distinction that governs everything after it: **potential energy is not free energy**, shown on a model with two conformers where the lower-energy one is not the populated one. Solvation is then treated both ways — Poisson's equation solved across a dielectric boundary and checked against the Born expression, and solvent-accessible surface area obtained by numerical sphere sampling — followed by the minimum image convention and a measurement of how much energy a cutoff actually discards.
 
 Monte Carlo begins with why uniform random sampling fails: almost every configuration carries no Boltzmann weight at all. A Metropolis simulation of a Lennard-Jones liquid in reduced units follows, and the radial distribution function is extracted from it. Molecular dynamics compares Euler against velocity Verlet, covers thermostatting, explains why the time step is what it is and what constraints buy, and pulls from a trajectory the things a random walk cannot give — displacement, diffusion, correlation functions. Free energy is done on a system whose exact answer is known, then by windowing (eqn 4.40) and thermodynamic integration (eqn 4.42), closing with a thermodynamic cycle for a relative binding free energy.
 
-### Chapter 5 — Modelling Biomolecules (§5.1–5.5)
+### Chapter 5 : Modelling Biomolecules (§5.1–5.5)
 
 Why protein structure is not simply computed: the size of conformational space is calculated first, so the rest of the chapter has a reason to exist. Folding is then approached with the simplest model that works — hydrophobic and polar beads on a cubic lattice — and the lattice's own cost is quantified by fitting an ideal α-helix onto lattices of different spacing. Secondary structure prediction is tested on sequences deliberately constructed so that part of their structure is **non-local**, which is where the local methods are expected to fail.
 
 Homology modelling is built in full: dynamic programming on the book's own alignment example, gap penalties and a comparison matrix derived from residue properties, conservation across a family with a planted active site, periodicity detection in the hydrophobicity pattern (the core of the Benner method), 3D-1D environment profiles, and threading one sequence against several candidate folds. The model itself is then assembled — framework from structurally conserved regions, loops by database search matching the framework rather than just the length, sidechains by simulated annealing over rotamers — and validated with the book's checks applied to both a correct model and a deliberately wrong one. The chapter closes on enzyme catalysis: what is lost when a residue is truncated to its functional group, a QM reaction coordinate inside a classical charge field, and the empirical valence bond method as two resonance forms in one secular determinant.
 
-### Chapter 6 — Ligand Design (§6.1–6.6)
+### Chapter 6 : Ligand Design (§6.1–6.6)
 
 The problem turned round: what should bind to the target, and how much can be inferred when the target's structure is unknown. QSAR is fitted as equation 6.1 and then broken deliberately — the fit is excellent and the compound ranking is wrong, because the activity term contains transport as well as affinity. 3D-QSAR follows the book's own arithmetic: a ten-point cubic grid, two fields, 2000 variables from 20 compounds, ordinary least squares against partial least squares, and a coefficient map that recovers the regions which actually determine activity.
 
