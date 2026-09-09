@@ -8,13 +8,13 @@ Executable Python notebooks that work through **[*Computational Chemistry* (Oxfo
 
 | Notebook | Book sections | Code cells | Figures |
 |---|---|---:|---:|
-| [Chapter 1 — Introduction to Computational Chemistry](#chapter-1--introduction-to-computational-chemistry) | Ch. 1 | 24 | 9 |
-| [Chapter 2.1 — Quantum Mechanics](#chapter-21--quantum-mechanics-2127) | §2.1–2.7 | 13 | 7 |
-| [Chapter 2.2 — Quantum Mechanics](#chapter-22--quantum-mechanics-28216) | §2.8–2.16 | 16 | 7 |
-| [Chapter 3 — Molecular Mechanics](#chapter-3--molecular-mechanics-3136) | §3.1–3.6 | 21 | 9 |
-| [Chapter 4 — Statistical Mechanics](#chapter-4--statistical-mechanics-4146) | §4.1–4.6 | 17 | 9 |
-| [Chapter 5 — Modelling Biomolecules](#chapter-5--modelling-biomolecules-5155) | §5.1–5.5 | 18 | 7 |
-| [Chapter 6 — Ligand Design](#chapter-6--ligand-design-6166) | §6.1–6.6 | 21 | 3 |
+| [Chapter 1 — Introduction to Computational Chemistry](https://github.com/Lala2398/Cheminformatics/blob/main/Chapter1_Computational_Chemistry_Introduction.ipynb) | Ch. 1 | 24 | 9 |
+| [Chapter 2.1 — Quantum Mechanics](https://github.com/Lala2398/Cheminformatics/blob/main/Chapter2_1_Quantum_Mechanics.ipynb) | §2.1–2.7 | 13 | 7 |
+| [Chapter 2.2 — Quantum Mechanics](https://github.com/Lala2398/Cheminformatics/blob/main/Chapter2_2_Quantum_Mechanics.ipynb) | §2.8–2.16 | 16 | 7 |
+| [Chapter 3 — Molecular Mechanics](https://github.com/Lala2398/Cheminformatics/blob/main/Chapter_3_Molecular_Mechanics.ipynb) | §3.1–3.6 | 21 | 9 |
+| [Chapter 4 — Statistical Mechanics](https://github.com/Lala2398/Cheminformatics/blob/main/Chapter_4_Statistical_Mechanics.ipynb) | §4.1–4.6 | 17 | 9 |
+| [Chapter 5 — Modelling Biomolecules](https://github.com/Lala2398/Cheminformatics/blob/main/Chapter_5_Modelling_Biomolecules.ipynb) | §5.1–5.5 | 18 | 7 |
+| [Chapter 6 — Ligand Design](https://github.com/Lala2398/Cheminformatics/blob/main/Chapter_6_Ligand_Design.ipynb) | §6.1–6.6 | 21 | 3 |
 
 Chapter 2 is split into two notebooks because the book's second chapter is long enough that a single file would be unwieldy: **2.1** covers §2.1–2.7 (from wave functions to self-consistent fields), **2.2** covers §2.8–2.16 (from configuration interaction to static indices).
 
