@@ -147,7 +147,7 @@ The chapter structure, the arguments tested, and the equation numbering follow G
 
 ## Author of repository
 
-**Lala Ibadullayeva** — PhD in Computational Structural Biology.
+**Lala Ibadullayeva** — PhDc. in Computational Structural Biology.
 GitHub: [@Lala2398](https://github.com/Lala2398)
 
 Corrections and disagreements are welcome, particularly on the results listed above. If you re-run a notebook and a seeded number comes out differently, please open an issue with your Python and library versions.
